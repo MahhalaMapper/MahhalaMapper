@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class NestedMappingProjectionsExplicitExpanding : AutoMapperSpecBase
+public class NestedMappingProjectionsExplicitExpanding : MahhalaMapperSpecBase
 {
     Fu _destination;
     int _propValue = 23;

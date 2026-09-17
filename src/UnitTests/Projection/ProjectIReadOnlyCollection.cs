@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+﻿namespace MahhalaMapper.UnitTests.Projection;
 public class ProjectIReadOnlyCollection
 {
     private MapperConfiguration _config;

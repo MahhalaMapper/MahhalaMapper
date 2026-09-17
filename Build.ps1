@@ -26,6 +26,6 @@ $artifacts = ".\artifacts"
 
 if(Test-Path $artifacts) { Remove-Item $artifacts -Force -Recurse }
 
-exec { & dotnet test -c Release --results-directory $artifacts -l trx }
+exec { & dotnet test -c Release --results-directory $artifacts }
 
-exec { & dotnet pack .\src\AutoMapper\AutoMapper.csproj -c Release -o $artifacts --no-build }
+exec { & dotnet pack .\src\MahhalaMapper\MahhalaMapper.csproj -c Release -o $artifacts --no-build }

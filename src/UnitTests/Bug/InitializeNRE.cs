@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class InitializeNRE2 : AutoMapperSpecBase
+public class InitializeNRE2 : MahhalaMapperSpecBase
 {
     public interface IRes : IValueResolver<Source, Destination, int>
     {
@@ -33,7 +33,7 @@ public class InitializeNRE2 : AutoMapperSpecBase
 }
 
 
-public class InitializeNRE : AutoMapperSpecBase
+public class InitializeNRE : MahhalaMapperSpecBase
 {
     public class TestEntity
     {

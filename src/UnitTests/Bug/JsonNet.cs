@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
 using StringKeyValuePair = KeyValuePair<string, string>;
 
-public class JsonNetDictionary : AutoMapperSpecBase
+public class JsonNetDictionary : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -52,7 +52,7 @@ public class JsonNetDictionary : AutoMapperSpecBase
     }
 }
 
-public class JObjectField : AutoMapperSpecBase
+public class JObjectField : MahhalaMapperSpecBase
 {
     class JContainer : IEnumerable<DBNull>
     {

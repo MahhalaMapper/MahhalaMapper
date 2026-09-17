@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+﻿namespace MahhalaMapper.UnitTests.Projection;
 
-public class RecursiveQuery : AutoMapperSpecBase
+public class RecursiveQuery : MahhalaMapperSpecBase
 {
     class Source
     {

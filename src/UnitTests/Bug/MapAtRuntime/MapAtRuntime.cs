@@ -1,9 +1,9 @@
 ﻿using OmmitedDatabaseModel3;
 using OmmitedDTOModel3;
 
-namespace AutoMapper.UnitTests;
+namespace MahhalaMapper.UnitTests;
 
-public class MapAtRuntime : AutoMapperSpecBase
+public class MapAtRuntime : MahhalaMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

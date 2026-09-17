@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Mappers.ReadOnlyDictionaryMapper;
+﻿namespace MahhalaMapper.UnitTests.Mappers.ReadOnlyDictionaryMapper;
 
-public class When_mapping_to_interface_readonly_dictionary : AutoMapperSpecBase
+public class When_mapping_to_interface_readonly_dictionary : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -37,7 +37,7 @@ public class When_mapping_to_interface_readonly_dictionary : AutoMapperSpecBase
         dest.Values.ShouldBe(values);
     }
 }
-public class When_mapping_to_concrete_readonly_dictionary : AutoMapperSpecBase
+public class When_mapping_to_concrete_readonly_dictionary : MahhalaMapperSpecBase
 {
     public class Source
     {

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
+﻿namespace MahhalaMapper.UnitTests.MappingInheritance;
 
-public class ShouldInheritBeforeAndAfterMapOnlyOnce : AutoMapperSpecBase
+public class ShouldInheritBeforeAndAfterMapOnlyOnce : MahhalaMapperSpecBase
 {
     int afterMapCount;
     int beforeMapCount;
@@ -38,7 +38,7 @@ public class ShouldInheritBeforeAndAfterMapOnlyOnce : AutoMapperSpecBase
     }
 }
 
-public class ShouldInheritBeforeAndAfterMapOnlyOnceIncludeBase : AutoMapperSpecBase
+public class ShouldInheritBeforeAndAfterMapOnlyOnceIncludeBase : MahhalaMapperSpecBase
 {
     int afterMapCount;
     int beforeMapCount;

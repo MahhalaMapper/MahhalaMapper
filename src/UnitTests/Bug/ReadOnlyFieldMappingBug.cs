@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class ReadOnlyFieldMappingBug : AutoMapperSpecBase
+public class ReadOnlyFieldMappingBug : MahhalaMapperSpecBase
 {
     public class Source
     {

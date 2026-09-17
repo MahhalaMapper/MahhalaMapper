@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class ProjectConstructorParameters : AutoMapperSpecBase
+public class ProjectConstructorParameters : MahhalaMapperSpecBase
 {
     SourceDto _dest;
     const int SomeValue = 15;

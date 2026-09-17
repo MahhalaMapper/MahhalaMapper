@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+﻿namespace MahhalaMapper.IntegrationTests;
 public class NullCheckCollectionsFirstOrDefault : IntegrationTest<NullCheckCollectionsFirstOrDefault.DatabaseInitializer>
 {
     public class SourceType

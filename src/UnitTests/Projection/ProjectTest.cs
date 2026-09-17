@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class ProjectWithFields : AutoMapperSpecBase
+﻿namespace MahhalaMapper.UnitTests.Projection;
+public class ProjectWithFields : MahhalaMapperSpecBase
 {
     public class Foo
     {

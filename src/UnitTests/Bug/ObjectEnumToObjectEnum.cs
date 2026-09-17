@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class ObjectEnumToObjectEnum : AutoMapperSpecBase
+public class ObjectEnumToObjectEnum : MahhalaMapperSpecBase
 {
     Target _target;
 

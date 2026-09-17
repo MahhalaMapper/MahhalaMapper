@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace MahhalaMapper.UnitTests;
 
-public class OpenGenericsWithAs : AutoMapperSpecBase
+public class OpenGenericsWithAs : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -31,7 +31,7 @@ public class OpenGenericsWithAs : AutoMapperSpecBase
     }
 }
 
-public class OpenGenericsWithInclude : AutoMapperSpecBase
+public class OpenGenericsWithInclude : MahhalaMapperSpecBase
 {
     public class Person
     {
@@ -96,7 +96,7 @@ public class OpenGenericsWithInclude : AutoMapperSpecBase
     }
 }
 
-public class OpenGenericsWithIncludeBase : AutoMapperSpecBase
+public class OpenGenericsWithIncludeBase : MahhalaMapperSpecBase
 {
     public class Person
     {
@@ -162,7 +162,7 @@ public class OpenGenericsWithIncludeBase : AutoMapperSpecBase
     }
 }
 
-public class OpenGenericsAndNonGenericsWithIncludeBase : AutoMapperSpecBase
+public class OpenGenericsAndNonGenericsWithIncludeBase : MahhalaMapperSpecBase
 {
     public abstract class Entity
     {
@@ -219,7 +219,7 @@ public class OpenGenericsAndNonGenericsWithIncludeBase : AutoMapperSpecBase
         model.SubMember.ShouldBe("bar");
     }
 }
-public class IncludeBaseOpenGenerics : AutoMapperSpecBase
+public class IncludeBaseOpenGenerics : MahhalaMapperSpecBase
 {
     public abstract class OrderModel<T>
     {

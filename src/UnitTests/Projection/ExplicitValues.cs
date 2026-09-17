@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class ExplicitValues : AutoMapperSpecBase
+﻿namespace MahhalaMapper.UnitTests.Projection;
+public class ExplicitValues : MahhalaMapperSpecBase
 {
     private List<Dest> _dests;
 

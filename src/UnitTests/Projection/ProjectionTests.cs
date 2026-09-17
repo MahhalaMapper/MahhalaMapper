@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+﻿namespace MahhalaMapper.UnitTests.Projection;
 
-public class NonNullableToNullable : AutoMapperSpecBase
+public class NonNullableToNullable : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -14,7 +14,7 @@ public class NonNullableToNullable : AutoMapperSpecBase
     [Fact]
     public void Should_project() => ProjectTo<Destination>(new[] { new Source() }.AsQueryable()).First().Id.ShouldBe(0);
 }
-public class InMemoryMapObjectPropertyFromSubQuery : AutoMapperSpecBase
+public class InMemoryMapObjectPropertyFromSubQuery : MahhalaMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

@@ -1,9 +1,9 @@
-﻿namespace AutoMapper.IntegrationTests;
+﻿namespace MahhalaMapper.IntegrationTests;
 
-public abstract class IntegrationTest<TInitializer> : AutoMapperSpecBase, IAsyncLifetime where TInitializer : IInitializer, new()
+public abstract class IntegrationTest<TInitializer> : MahhalaMapperSpecBase, IAsyncLifetime where TInitializer : IInitializer, new()
 {
-    Task IAsyncLifetime.DisposeAsync() => Task.CompletedTask;
-    Task IAsyncLifetime.InitializeAsync() => new TInitializer().Migrate();
+    System.Threading.Tasks.ValueTask IAsyncDisposable.DisposeAsync() => new System.Threading.Tasks.ValueTask();
+    System.Threading.Tasks.ValueTask IAsyncLifetime.InitializeAsync() => new System.Threading.Tasks.ValueTask(new TInitializer().Migrate());
 }
 public interface IInitializer
 {
@@ -28,6 +28,6 @@ public class DropCreateDatabaseAlways<TContext> : IInitializer where TContext : 
 public abstract class LocalDbContext : DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer(
-        @$"Data Source=(localdb)\mssqllocaldb;Integrated Security=True;MultipleActiveResultSets=True;Database={GetType()};Connection Timeout=300",
+        @$"Data Source=(localdb)\mssqllocaldb;Integrated Security=True;MultipleActiveResultSets=True;Database={GetType().Name}_{(uint)GetType().ToString().GetHashCode():X8};Connection Timeout=300",
         o => o.EnableRetryOnFailure(maxRetryCount: 10).CommandTimeout(120));
 }

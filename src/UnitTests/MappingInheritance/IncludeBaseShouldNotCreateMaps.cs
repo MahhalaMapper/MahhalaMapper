@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
+﻿namespace MahhalaMapper.UnitTests.MappingInheritance;
 
-public class IncludeBaseShouldNotCreateMaps : AutoMapperSpecBase
+public class IncludeBaseShouldNotCreateMaps : MahhalaMapperSpecBase
 {
     public abstract class BaseBaseSource { }
     public class BaseSource : BaseBaseSource

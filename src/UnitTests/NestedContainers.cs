@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests
+namespace MahhalaMapper.UnitTests
 {
     namespace NestedContainers
     {
-        public class When_specifying_a_custom_contextual_constructor : AutoMapperSpecBase
+        public class When_specifying_a_custom_contextual_constructor : MahhalaMapperSpecBase
         {
             private Dest _dest;
 
@@ -72,7 +72,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_specifying_a_custom_contextual_constructor_for_type_converters : AutoMapperSpecBase
+        public class When_specifying_a_custom_contextual_constructor_for_type_converters : MahhalaMapperSpecBase
         {
             private Dest _dest;
 

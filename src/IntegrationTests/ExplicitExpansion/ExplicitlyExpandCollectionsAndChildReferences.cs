@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.ExplicitExpansion;
+﻿namespace MahhalaMapper.IntegrationTests.ExplicitExpansion;
 
 public class ExplicitlyExpandCollectionsAndChildReferences : IntegrationTest<ExplicitlyExpandCollectionsAndChildReferences.DatabaseInitializer>
 {

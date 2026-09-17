@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class ByrefConstructorParameter : AutoMapperSpecBase
+public class ByrefConstructorParameter : MahhalaMapperSpecBase
 {
     private Destination _destination;
 

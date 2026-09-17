@@ -1,6 +1,6 @@
 ﻿using System.Dynamic;
 
-namespace AutoMapper.UnitTests.Mappers.Dynamic;
+namespace MahhalaMapper.UnitTests.Mappers.Dynamic;
 
 class Destination
 {

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class GenericCreateMapsWithCircularReference : AutoMapperSpecBase
+public class GenericCreateMapsWithCircularReference : MahhalaMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

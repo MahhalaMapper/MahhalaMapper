@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
+﻿namespace MahhalaMapper.UnitTests.MappingInheritance;
 
-public class IncludeAllDerived : AutoMapperSpecBase
+public class IncludeAllDerived : MahhalaMapperSpecBase
 {
     public class A
     {

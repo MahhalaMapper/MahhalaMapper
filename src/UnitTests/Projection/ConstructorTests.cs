@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+﻿namespace MahhalaMapper.UnitTests.Projection;
 
-public class ConstructorLetClause : AutoMapperSpecBase
+public class ConstructorLetClause : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -59,7 +59,7 @@ public class ConstructorLetClause : AutoMapperSpecBase
         firstValue.Value2.ShouldBe(2);
     }
 }
-public class ConstructorToString : AutoMapperSpecBase
+public class ConstructorToString : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -74,7 +74,7 @@ public class ConstructorToString : AutoMapperSpecBase
     [Fact]
     public void Should_construct_correctly() => new[] { new Source { Value = 5 } }.AsQueryable().ProjectTo<Destination>(Configuration).First().Value.ShouldBe("5");
 }
-public class ConstructorMapFrom : AutoMapperSpecBase
+public class ConstructorMapFrom : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -88,7 +88,7 @@ public class ConstructorMapFrom : AutoMapperSpecBase
     [Fact]
     public void Should_construct_correctly() => new[] { new Source { Value = 5 } }.AsQueryable().ProjectTo<Destination>(Configuration).First().Value.ShouldBeTrue();
 }
-public class ConstructorIncludeMembers : AutoMapperSpecBase
+public class ConstructorIncludeMembers : MahhalaMapperSpecBase
 {
     class SourceWrapper
     {
@@ -111,7 +111,7 @@ public class ConstructorIncludeMembers : AutoMapperSpecBase
     [Fact]
     public void Should_construct_correctly() => new[] { new SourceWrapper { Source = new Source { Value = 5 } } }.AsQueryable().ProjectTo<Destination>(Configuration).First().Value.ShouldBe("5");
 }
-public class ConstructorsWithCollections : AutoMapperSpecBase
+public class ConstructorsWithCollections : MahhalaMapperSpecBase
 {
     class Addresses
     {
@@ -147,7 +147,7 @@ public class ConstructorsWithCollections : AutoMapperSpecBase
     [Fact]
     public void Should_work() => ProjectTo<UserDto>(new[] { new Users { FkAddress = new Addresses { Address = "address" }  } }.AsQueryable()).First().AddressDto.Address.ShouldBe("address");
 }
-public class ConstructorTests : AutoMapperSpecBase
+public class ConstructorTests : MahhalaMapperSpecBase
 {
     private Dest[] _dest;
 
@@ -198,7 +198,7 @@ public class ConstructorTests : AutoMapperSpecBase
         _dest[0].Other.ShouldBe(15);
     }
 }
-public class NestedConstructors : AutoMapperSpecBase
+public class NestedConstructors : MahhalaMapperSpecBase
 {
     public class A
     {
@@ -229,7 +229,7 @@ public class NestedConstructors : AutoMapperSpecBase
         ProjectTo<DtoA>(new[] { new A { B = new B { Id = 3 } } }.AsQueryable()).FirstOrDefault().B.Id.ShouldBe(3);
 }
 
-public class ConstructorLetClauseWithIheritance : AutoMapperSpecBase
+public class ConstructorLetClauseWithIheritance : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -347,7 +347,7 @@ public class ConstructorLetClauseWithIheritance : AutoMapperSpecBase
         list.OfType<DestinationB>().Any(a => a.B == "b").ShouldBeTrue();
     }
 }
-public class ConstructorToStringWithIheritance : AutoMapperSpecBase
+public class ConstructorToStringWithIheritance : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -398,7 +398,7 @@ public class ConstructorToStringWithIheritance : AutoMapperSpecBase
         list.OfType<DestinationB>().Any(p => p.B == "b");
     }
 }
-public class ConstructorMapFromWithIheritance : AutoMapperSpecBase
+public class ConstructorMapFromWithIheritance : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -449,7 +449,7 @@ public class ConstructorMapFromWithIheritance : AutoMapperSpecBase
         list.OfType<DestinationB>().Any(p => p.HasB).ShouldBeTrue();
     }
 }
-public class ConstructorIncludeMembersWithIheritance : AutoMapperSpecBase
+public class ConstructorIncludeMembersWithIheritance : MahhalaMapperSpecBase
 {
     class SourceWrapper
     {
@@ -523,7 +523,7 @@ public class ConstructorIncludeMembersWithIheritance : AutoMapperSpecBase
         list.OfType<DestinationB>().Any(p => p.B == "b").ShouldBeTrue();
     }
 }
-public class ConstructorsWithCollectionsWithIheritance : AutoMapperSpecBase
+public class ConstructorsWithCollectionsWithIheritance : MahhalaMapperSpecBase
 {
     class Addresses
     {
@@ -595,7 +595,7 @@ public class ConstructorsWithCollectionsWithIheritance : AutoMapperSpecBase
         list.OfType<UserBDto>().Any(p => p.B == "b").ShouldBeTrue();
     }
 }
-public class ConstructorTestsWithIheritance : AutoMapperSpecBase
+public class ConstructorTestsWithIheritance : MahhalaMapperSpecBase
 {
     private Dest[] _dest;
 
@@ -700,7 +700,7 @@ public class ConstructorTestsWithIheritance : AutoMapperSpecBase
         _dest.OfType<DestB>().Any(p => p.OtherB == "bb").ShouldBeTrue();
     }
 }
-public class NestedConstructorsWithIheritance : AutoMapperSpecBase
+public class NestedConstructorsWithIheritance : MahhalaMapperSpecBase
 {
     public class A
     {

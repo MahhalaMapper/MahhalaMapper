@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace MahhalaMapper.UnitTests.Bug;
 
-public class MappingToAReadOnlyCollection : AutoMapperSpecBase
+public class MappingToAReadOnlyCollection : MahhalaMapperSpecBase
 {
     private Destination _destination;
 

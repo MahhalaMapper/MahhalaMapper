@@ -1,4 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿using System.Linq;
+
+namespace MahhalaMapper.UnitTests.Bug;
 public class MultiThreadingIssues
 {
     public class Type1
@@ -45,7 +47,7 @@ public class MultiThreadingIssues
 
         for(int i = 0; i < threadCount; i++)
         {
-            Task.Factory.StartNew(doMapping).ContinueWith(
+            Task.Factory.StartNew(doMapping, TestContext.Current.CancellationToken).ContinueWith(
                 a =>
                 {
                     if(Interlocked.Increment(ref _done) == threadCount)
@@ -53,7 +55,7 @@ public class MultiThreadingIssues
                         _allDone.Set();
                     }
 
-                });
+                }, TestContext.Current.CancellationToken);
         }
 
         _allDone.WaitOne(TimeSpan.FromSeconds(10));
@@ -641,7 +643,7 @@ public class ResolveWithGenericMap
         };
         var tasks =
             types
-            .Concat(types.Select(t => t.Reverse().ToArray()))
+            .Concat(types.Select(t => System.Linq.Enumerable.Reverse(t).ToArray()))
             .Select(t=>(SourceType: sourceType.MakeGenericType(t[0]), DestinationType: destinationType.MakeGenericType(t[1])))
             .ToArray()
             .Select(s => Task.Factory.StartNew(() => c.ResolveTypeMap(s.SourceType, s.DestinationType)))
@@ -1173,7 +1175,7 @@ public class ResolveGenericTypeMapThreadingIssues
         };
         var tasks =
             types
-            .Concat(types.Select(t => t.Reverse().ToArray()))
+            .Concat(types.Select(t => System.Linq.Enumerable.Reverse(t).ToArray()))
             .Select(t=>(SourceType: sourceType.MakeGenericType(t[0]), DestinationType: destinationType.MakeGenericType(t[1])))
             .ToArray()
             .Select(s => Task.Factory.StartNew(() => mapper.Map(null, s.SourceType, s.DestinationType)))

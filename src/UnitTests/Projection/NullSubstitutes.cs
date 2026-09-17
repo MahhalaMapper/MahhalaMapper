@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class NullSubstitutes : AutoMapperSpecBase
+﻿namespace MahhalaMapper.UnitTests.Projection;
+public class NullSubstitutes : MahhalaMapperSpecBase
 {
     private List<Dest> _dests;
 
@@ -32,7 +32,7 @@ public class NullSubstitutes : AutoMapperSpecBase
     }
 }
 
-public class NullSubstitutesWithMapFrom : AutoMapperSpecBase
+public class NullSubstitutesWithMapFrom : MahhalaMapperSpecBase
 {
     private List<Dest> _dests;
 

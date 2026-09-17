@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class DuplicateExtensionMethods : AutoMapperSpecBase
+public class DuplicateExtensionMethods : MahhalaMapperSpecBase
 {
     public class Outlay
     {

@@ -1,6 +1,6 @@
-﻿using AutoMapper.Execution;
+﻿using MahhalaMapper.Execution;
 
-namespace AutoMapper.UnitTests;
+namespace MahhalaMapper.UnitTests;
 
 public class GenerateSimilarType
 {

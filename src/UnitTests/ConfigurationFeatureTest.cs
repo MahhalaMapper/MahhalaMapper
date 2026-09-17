@@ -1,6 +1,6 @@
-﻿using AutoMapper.Features;
+﻿using MahhalaMapper.Features;
 
-namespace AutoMapper.UnitTests;
+namespace MahhalaMapper.UnitTests;
 
 public class ConfigurationFeatureTest
 {

@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace MahhalaMapper.UnitTests.Bug;
 
-public class EnumMatchingOnValue : AutoMapperSpecBase
+public class EnumMatchingOnValue : MahhalaMapperSpecBase
 {
     private SecondClass _result;
 

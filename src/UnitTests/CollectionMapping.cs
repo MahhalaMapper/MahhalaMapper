@@ -1,7 +1,7 @@
 using System.Collections.Specialized;
 using System.Collections.Immutable;
-namespace AutoMapper.UnitTests;
-public class UnsupportedCollection : AutoMapperSpecBase
+namespace MahhalaMapper.UnitTests;
+public class UnsupportedCollection : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -17,10 +17,10 @@ public class UnsupportedCollection : AutoMapperSpecBase
     }
     protected override MapperConfiguration CreateConfiguration() => new(c => c.CreateMap<Source, Destination>());
     [Fact]
-    public void ThrowsAtMapTime() => new Action(()=>Map<Destination>(new Source())).ShouldThrow<AutoMapperMappingException>()
+    public void ThrowsAtMapTime() => new Action(()=>Map<Destination>(new Source())).ShouldThrow<MahhalaMapperMappingException>()
         .InnerException.ShouldBeOfType<NotSupportedException>().Message.ShouldBe($"Unknown collection. Consider a custom type converter from {typeof(MyList<DateTime>)} to {typeof(MyList<int>)}.");
 }
-public class When_mapping_interface_to_interface_readonly_set : AutoMapperSpecBase
+public class When_mapping_interface_to_interface_readonly_set : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -38,7 +38,7 @@ public class When_mapping_interface_to_interface_readonly_set : AutoMapperSpecBa
         Map<Destination>(new Source { Values = values }).Values.ShouldBe(values);
     }
 }
-public class When_mapping_hashset_to_interface_readonly_set : AutoMapperSpecBase
+public class When_mapping_hashset_to_interface_readonly_set : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -56,7 +56,7 @@ public class When_mapping_hashset_to_interface_readonly_set : AutoMapperSpecBase
         Map<Destination>(new Source { Values = values }).Values.ShouldBe(values);
     }
 }
-public class NonPublicEnumeratorCurrent : AutoMapperSpecBase
+public class NonPublicEnumeratorCurrent : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -86,7 +86,7 @@ public class NonPublicEnumeratorCurrent : AutoMapperSpecBase
     [Fact]
     public void Should_work() => Map<Destination>(new Source()).Value.ShouldBe(new[] { 1, 2, 3 });
 }
-public class ImmutableCollection : AutoMapperSpecBase
+public class ImmutableCollection : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -101,7 +101,7 @@ public class ImmutableCollection : AutoMapperSpecBase
     [Fact]
     public void Should_work() => Map<Destination>(new Source()).Value.ShouldBeOfType<ImmutableArray<int>>();
 }
-public class AssignableCollection : AutoMapperSpecBase
+public class AssignableCollection : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -120,7 +120,7 @@ public class AssignableCollection : AutoMapperSpecBase
     [Fact]
     public void Should_work() => Map<Destination>(new Source()).Value.ShouldBeOfType<MyJObject>();
 }
-public class RecursiveCollection : AutoMapperSpecBase
+public class RecursiveCollection : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -136,7 +136,7 @@ public class RecursiveCollection : AutoMapperSpecBase
     [Fact]
     public void Should_work() => Map<Destination>(new Source()).Value.ShouldBeOfType<MyJObject>();
 }
-public class AmbigousMethod : AutoMapperSpecBase
+public class AmbigousMethod : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -150,7 +150,7 @@ public class AmbigousMethod : AutoMapperSpecBase
     [Fact]
     public void Should_work() => Map<Destination[]>(new[] { new Source() }.OrderBy(s => s.Value));
 }
-public class Enumerator_disposable_at_runtime_class : AutoMapperSpecBase
+public class Enumerator_disposable_at_runtime_class : MahhalaMapperSpecBase
 {
     class CustomList<T> : List<T>
     {
@@ -196,7 +196,7 @@ public class Enumerator_disposable_at_runtime_class : AutoMapperSpecBase
         source.Disposed.ShouldBeTrue();
     }
 }
-public class Enumerator_non_disposable_struct : AutoMapperSpecBase
+public class Enumerator_non_disposable_struct : MahhalaMapperSpecBase
 {
     class CustomList<T> : List<T>
     {
@@ -238,7 +238,7 @@ public class Enumerator_non_disposable_struct : AutoMapperSpecBase
         source.Disposed.ShouldBeFalse();
     }
 }
-public class Enumerator_dispose : AutoMapperSpecBase
+public class Enumerator_dispose : MahhalaMapperSpecBase
 {
     class CustomList<T> : List<T>
     {
@@ -278,7 +278,7 @@ public class Enumerator_dispose : AutoMapperSpecBase
     }
 }
 
-public class Enumerator_dispose_exception : AutoMapperSpecBase
+public class Enumerator_dispose_exception : MahhalaMapperSpecBase
 {
     class CustomList<T> : List<T>
     {
@@ -324,7 +324,7 @@ public class Enumerator_dispose_exception : AutoMapperSpecBase
     }
 }
 
-public class Enumerator_dispose_struct : AutoMapperSpecBase
+public class Enumerator_dispose_struct : MahhalaMapperSpecBase
 {
     class CustomList<T> : List<T>
     {
@@ -368,7 +368,7 @@ public class Enumerator_dispose_struct : AutoMapperSpecBase
     }
 }
 
-public class Enumerator_dispose_exception_struct : AutoMapperSpecBase
+public class Enumerator_dispose_exception_struct : MahhalaMapperSpecBase
 {
     class CustomList<T> : List<T>
     {
@@ -418,7 +418,7 @@ public class Enumerator_dispose_exception_struct : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_existing_observable_collection : AutoMapperSpecBase
+public class When_mapping_to_existing_observable_collection : MahhalaMapperSpecBase
 {
     class CollectionHolder
     {
@@ -453,7 +453,7 @@ public class When_mapping_to_existing_observable_collection : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_member_typed_as_IEnumerable : AutoMapperSpecBase
+public class When_mapping_to_member_typed_as_IEnumerable : MahhalaMapperSpecBase
 {
     public class SourceItem { }
     public class DestItem { }
@@ -493,7 +493,7 @@ public class When_mapping_to_member_typed_as_IEnumerable : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_existing_collection_typed_as_IEnumerable : AutoMapperSpecBase
+public class When_mapping_to_existing_collection_typed_as_IEnumerable : MahhalaMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(_=>{ });
 
@@ -507,7 +507,7 @@ public class When_mapping_to_existing_collection_typed_as_IEnumerable : AutoMapp
     }
 }
 
-public class When_mapping_to_readonly_property_as_IEnumerable_and_existing_destination : AutoMapperSpecBase
+public class When_mapping_to_readonly_property_as_IEnumerable_and_existing_destination : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -536,7 +536,7 @@ public class When_mapping_to_readonly_property_as_IEnumerable_and_existing_desti
     }
 }
 
-public class When_mapping_to_readonly_collection_without_setter : AutoMapperSpecBase
+public class When_mapping_to_readonly_collection_without_setter : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -549,12 +549,12 @@ public class When_mapping_to_readonly_collection_without_setter : AutoMapperSpec
     protected override MapperConfiguration CreateConfiguration() => new(cfg => cfg.CreateMap<Source, Destination>());
     [Fact]
     public void Should_fail() => new Action(() => Mapper.Map(new Source(), new Destination()))
-        .ShouldThrow<AutoMapperMappingException>()
+        .ShouldThrow<MahhalaMapperMappingException>()
         .InnerException.ShouldBeOfType<NotSupportedException>()
         .Message.ShouldBe("Collection is read-only.");
 }
 
-public class When_mapping_to_readonly_property_UseDestinationValue : AutoMapperSpecBase
+public class When_mapping_to_readonly_property_UseDestinationValue : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -583,7 +583,7 @@ public class When_mapping_to_readonly_property_UseDestinationValue : AutoMapperS
     }
 }
 
-public class When_mapping_to_readonly_property_as_IEnumerable : AutoMapperSpecBase
+public class When_mapping_to_readonly_property_as_IEnumerable : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -613,7 +613,7 @@ public class When_mapping_to_readonly_property_as_IEnumerable : AutoMapperSpecBa
     }
 }
 
-public class When_mapping_from_struct_collection : AutoMapperSpecBase
+public class When_mapping_from_struct_collection : MahhalaMapperSpecBase
 {
     public struct MyCollection : IEnumerable<int>
     {
@@ -654,7 +654,7 @@ public class When_mapping_from_struct_collection : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_custom_collection_type : AutoMapperSpecBase
+public class When_mapping_to_custom_collection_type : MahhalaMapperSpecBase
 {
     public class MyCollection : CollectionBase
     {
@@ -711,7 +711,7 @@ public class When_mapping_to_unknown_collection_type : NonValidatingSpecBase
     [Fact]
     public void Should_report_missing_map()
     {
-        new Action(AssertConfigurationIsValid).ShouldThrowException<AutoMapperConfigurationException>(ex =>
+        new Action(AssertConfigurationIsValid).ShouldThrowException<MahhalaMapperConfigurationException>(ex =>
         {
             ex.MemberMap.SourceMember.ShouldBe(typeof(SourceItem).GetProperty("ShipsTo"));
             ex.Types.Value.ShouldBe(new TypePair(typeof(SourceItem), typeof(DestItem)));
@@ -719,7 +719,7 @@ public class When_mapping_to_unknown_collection_type : NonValidatingSpecBase
     } 
 }
 
-public class When_mapping_collections_with_inheritance : AutoMapperSpecBase
+public class When_mapping_collections_with_inheritance : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -751,7 +751,7 @@ public class When_mapping_collections_with_inheritance : AutoMapperSpecBase
     public void Validate() => AssertConfigurationIsValid();
 }
 
-public class When_passing_a_not_empty_collection : AutoMapperSpecBase
+public class When_passing_a_not_empty_collection : MahhalaMapperSpecBase
 {
     Destination _destination = new Destination();
 
@@ -791,7 +791,7 @@ public class When_passing_a_not_empty_collection : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_collections_with_structs : AutoMapperSpecBase
+public class When_mapping_collections_with_structs : MahhalaMapperSpecBase
 {
     BarDTO _destination;
 
@@ -1100,7 +1100,7 @@ public class CollectionMapping
     }
 }
 
-public class When_mapping_from_ICollection_types_but_implementations_are_different : AutoMapperSpecBase
+public class When_mapping_from_ICollection_types_but_implementations_are_different : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -1146,7 +1146,7 @@ public class When_mapping_from_ICollection_types_but_implementations_are_differe
     }
 }
 
-public class When_mapping_enumerable_to_array : AutoMapperSpecBase
+public class When_mapping_enumerable_to_array : MahhalaMapperSpecBase
 {
     public class Source
     {

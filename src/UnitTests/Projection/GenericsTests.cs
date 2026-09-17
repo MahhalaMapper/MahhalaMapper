@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class GenericsTests : AutoMapperSpecBase
+﻿namespace MahhalaMapper.UnitTests.Projection;
+public class GenericsTests : MahhalaMapperSpecBase
 {
     private Dest<string>[] _dests;
 

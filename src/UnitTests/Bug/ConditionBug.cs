@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Bug
+﻿namespace MahhalaMapper.UnitTests.Bug
 {
     namespace ConditionBug
     {
-        public class Example : AutoMapperSpecBase
+        public class Example : MahhalaMapperSpecBase
         {
             public class SubSource
             {
@@ -56,7 +56,7 @@
             }
         }
 
-        public class PrimitiveExample : AutoMapperSpecBase
+        public class PrimitiveExample : MahhalaMapperSpecBase
         {
             public class Source
             {
@@ -89,7 +89,7 @@
 
     namespace ConditionPropertyBug
     {
-        public class Example : AutoMapperSpecBase
+        public class Example : MahhalaMapperSpecBase
         {
             public class Source
             {
@@ -159,7 +159,7 @@
             public int? Value { get; set; }
         }
 
-        public class ConditionTests : AutoMapperSpecBase
+        public class ConditionTests : MahhalaMapperSpecBase
         {
             protected override MapperConfiguration CreateConfiguration() => new(cfg =>
             {

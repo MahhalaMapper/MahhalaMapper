@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Mappers;
+﻿namespace MahhalaMapper.UnitTests.Mappers;
 
-public class ConstructorMapperTests : AutoMapperSpecBase
+public class ConstructorMapperTests : MahhalaMapperSpecBase
 {
     class Destination
     {

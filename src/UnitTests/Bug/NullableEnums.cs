@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class NullableEnums : AutoMapperSpecBase
+public class NullableEnums : MahhalaMapperSpecBase
 {
     public class Src { public EnumType? A { get; set; } }
     public class Dst { public EnumType? A { get; set; } }

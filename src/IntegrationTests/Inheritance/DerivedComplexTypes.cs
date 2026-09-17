@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.Inheritance;
+﻿namespace MahhalaMapper.IntegrationTests.Inheritance;
 
 public class DerivedComplexTypes : IntegrationTest<DerivedComplexTypes.DatabaseInitializer>
 {

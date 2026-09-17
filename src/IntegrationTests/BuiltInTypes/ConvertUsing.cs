@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.BuiltInTypes;
+﻿namespace MahhalaMapper.IntegrationTests.BuiltInTypes;
 
 public class ConvertUsingWithNullables : IntegrationTest<ConvertUsingWithNullables.DatabaseInitializer>
 {

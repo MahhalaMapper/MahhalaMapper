@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Bug;
-public class ForAllMapsTypeConverter : AutoMapperSpecBase
+﻿namespace MahhalaMapper.UnitTests.Bug;
+public class ForAllMapsTypeConverter : MahhalaMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(c =>
     {
@@ -9,7 +9,7 @@ public class ForAllMapsTypeConverter : AutoMapperSpecBase
     [Fact]
     public void Should_work() => Map<int>(42).ShouldBe(43);
 }
-public class ForAllMaps : AutoMapperSpecBase
+public class ForAllMaps : MahhalaMapperSpecBase
 {
     private Destination _destination;
     private Destination1 _destination1;
@@ -73,7 +73,7 @@ public class ForAllMaps : AutoMapperSpecBase
         _destination2.Number.ShouldBe(-1);
     }
 }
-public class ForAllMapsWithConstructors : AutoMapperSpecBase
+public class ForAllMapsWithConstructors : MahhalaMapperSpecBase
 {
     class Source
     {

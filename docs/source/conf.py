@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'AutoMapper'
+project = 'MahhalaMapper'
 copyright = '2024, Jimmy Bogard'
 author = 'Jimmy Bogard'
 

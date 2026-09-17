@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace MahhalaMapper.UnitTests;
 
-public class ReverseMapWithPreserveReferences : AutoMapperSpecBase
+public class ReverseMapWithPreserveReferences : MahhalaMapperSpecBase
 {
     UserDto _destination;
 

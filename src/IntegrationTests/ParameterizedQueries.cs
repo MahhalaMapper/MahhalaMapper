@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+﻿namespace MahhalaMapper.IntegrationTests;
 
 public class ParameterizedQueries : IntegrationTest<ParameterizedQueries.DatabaseInitializer>
 {
@@ -49,7 +49,7 @@ public class ParameterizedQueries : IntegrationTest<ParameterizedQueries.Databas
         {
             username = "Mary";
             var query = ProjectTo<EntityDto>(db.Entities, new { username });
-            dtos = await query.ToListAsync();
+            dtos = await query.ToListAsync(TestContext.Current.CancellationToken);
             var constantVisitor = new ConstantVisitor();
             constantVisitor.Visit(query.Expression);
             constantVisitor.HasConstant.ShouldBeFalse();
@@ -57,7 +57,7 @@ public class ParameterizedQueries : IntegrationTest<ParameterizedQueries.Databas
 
             username = "Joe";
             query = ProjectTo<EntityDto>(db.Entities, new Dictionary<string, object> { { "username", username }});
-            dtos = await query.ToListAsync();
+            dtos = await query.ToListAsync(TestContext.Current.CancellationToken);
             constantVisitor = new ConstantVisitor();
             constantVisitor.Visit(query.Expression);
             constantVisitor.HasConstant.ShouldBeTrue();
@@ -70,7 +70,7 @@ public class ParameterizedQueries : IntegrationTest<ParameterizedQueries.Databas
                 Value = e.Value,
                 UserName = username
             });
-            dtos = await query.ToListAsync();
+            dtos = await query.ToListAsync(TestContext.Current.CancellationToken);
             dtos.All(dto => dto.UserName == username).ShouldBeTrue();
             constantVisitor = new ConstantVisitor();
             constantVisitor.Visit(query.Expression);

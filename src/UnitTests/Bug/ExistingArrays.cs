@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class ExistingArrays : AutoMapperSpecBase
+public class ExistingArrays : MahhalaMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

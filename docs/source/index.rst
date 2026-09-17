@@ -1,17 +1,17 @@
-AutoMapper
-==========
+MahhalaMapper
+=============
 
-A convention-based object-object mapper.
+A convention-based object-object mapper. MahhalaMapper is a fork of AutoMapper.
 
-AutoMapper uses a fluent configuration API to define an object-object
-mapping strategy. AutoMapper uses a convention-based matching algorithm
-to match up source to destination values. AutoMapper is geared towards
+MahhalaMapper uses a fluent configuration API to define an object-object
+mapping strategy. MahhalaMapper uses a convention-based matching algorithm
+to match up source to destination values. MahhalaMapper is geared towards
 model projection scenarios to flatten complex object models to DTOs and
 other simple objects, whose design is better suited for serialization,
 communication, messaging, or simply an anti-corruption layer between the
 domain and application layer.
 
-New to AutoMapper? Check out the :doc:`Getting-started` page first.
+New to MahhalaMapper? Check out the :doc:`Getting-started` page first.
 
 .. _user-docs:
 
@@ -22,6 +22,7 @@ New to AutoMapper? Check out the :doc:`Getting-started` page first.
    Getting-started
    Understanding-your-mapping
    The-MyGet-build
+   AutoMapper-Compatibility
 
 .. _feature-docs:
 
@@ -64,8 +65,8 @@ New to AutoMapper? Check out the :doc:`Getting-started` page first.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Upgrading
-   
+   :caption: Upgrading (from AutoMapper)
+
    API-Changes
    13.0-Upgrade-Guide
    12.0-Upgrade-Guide
@@ -75,7 +76,7 @@ New to AutoMapper? Check out the :doc:`Getting-started` page first.
    8.1.1-Upgrade-Guide
    8.0-Upgrade-Guide
    5.0-Upgrade-Guide
-      
+
 Examples
 ========
 
@@ -84,8 +85,4 @@ The source code contains unit tests for all of the features listed above. Use th
 Housekeeping
 ============
 
-The latest builds can be found at `NuGet <http://www.nuget.org/packages/automapper>`_
-
-The dev builds can be found at `MyGet <https://myget.org/feed/automapperdev/package/nuget/AutoMapper>`_
-
-The discussion group is hosted on `Google Groups <http://groups.google.com/group/automapper-users>`_
+The latest builds can be found at `NuGet <http://www.nuget.org/packages/mahhalamapper>`_

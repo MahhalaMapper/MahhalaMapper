@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class StructMapping : AutoMapperSpecBase
+public class StructMapping : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -33,7 +33,7 @@ public class StructMapping : AutoMapperSpecBase
         _destination.Number.ShouldBe(23);
     }
 }
-public class DestinationStructMapping : AutoMapperSpecBase
+public class DestinationStructMapping : MahhalaMapperSpecBase
 {
     struct Source
     {

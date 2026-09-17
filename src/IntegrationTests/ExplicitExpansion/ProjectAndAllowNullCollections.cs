@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AutoMapper.IntegrationTests.ExplicitExpansion;
+namespace MahhalaMapper.IntegrationTests.ExplicitExpansion;
 
 public class ProjectAndAllowNullCollections : IntegrationTest<ProjectAndAllowNullCollections.DatabaseInitializer>
 {

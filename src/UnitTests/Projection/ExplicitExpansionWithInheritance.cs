@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+﻿namespace MahhalaMapper.UnitTests.Projection;
 
-public class ExplicitExpansionWithInheritance : AutoMapperSpecBase
+public class ExplicitExpansionWithInheritance : MahhalaMapperSpecBase
 {
     abstract class EntityBase
     {

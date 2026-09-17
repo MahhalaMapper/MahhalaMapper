@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests.Mappers;
+namespace MahhalaMapper.UnitTests.Mappers;
 
 public class TypeHelperTests
 {

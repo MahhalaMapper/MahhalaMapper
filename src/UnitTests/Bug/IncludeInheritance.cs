@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class IncludeInheritance : AutoMapperSpecBase
+public class IncludeInheritance : MahhalaMapperSpecBase
 {
     DestinationLevel2 _destination;
 

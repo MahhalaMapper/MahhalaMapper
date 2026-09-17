@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace MahhalaMapper.UnitTests;
 
-public class MaxExecutionPlanDepth : AutoMapperSpecBase
+public class MaxExecutionPlanDepth : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -103,7 +103,7 @@ public class MaxExecutionPlanDepth : AutoMapperSpecBase
         map.PropertyMaps.First().Inline.ShouldBeTrue();
     }
 }
-public class MaxExecutionPlanDepthDefault : AutoMapperSpecBase
+public class MaxExecutionPlanDepthDefault : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -205,7 +205,7 @@ public class MaxExecutionPlanDepthDefault : AutoMapperSpecBase
         map.PropertyMaps.First().Inline.ShouldBeTrue();
     }
 }
-public class MaxExecutionPlanDepthWithPreserveReferences : AutoMapperSpecBase
+public class MaxExecutionPlanDepthWithPreserveReferences : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -307,7 +307,7 @@ public class MaxExecutionPlanDepthWithPreserveReferences : AutoMapperSpecBase
         map.PropertyMaps.First().Inline.ShouldBeFalse();
     }
 }
-public class InlineWithoutPreserveReferences : AutoMapperSpecBase
+public class InlineWithoutPreserveReferences : MahhalaMapperSpecBase
 {
     class Source
     {

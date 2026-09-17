@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests.Bug
+namespace MahhalaMapper.UnitTests.Bug
 {
     namespace ByteArrayBug
     {
-        public class When_mapping_byte_arrays : AutoMapperSpecBase
+        public class When_mapping_byte_arrays : MahhalaMapperSpecBase
         {
             private Picture _source;
             private PictureDto _dest;
@@ -41,7 +41,7 @@ namespace AutoMapper.UnitTests.Bug
 
     namespace AssignableLists
     {
-        public class AutoMapperTests
+        public class MahhalaMapperTests
         {
             [Fact]
             public void ListShouldNotMapAsReference()

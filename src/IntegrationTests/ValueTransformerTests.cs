@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests
+﻿namespace MahhalaMapper.IntegrationTests
 {
     namespace ValueTransformerTests
     {
@@ -42,7 +42,7 @@
             {
                 using (var context = new Context())
                 {
-                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync();
+                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync(TestContext.Current.CancellationToken);
 
                     dest.Value.ShouldBe("Jimmy is straight up dope");
                 }
@@ -90,7 +90,7 @@
             {
                 using (var context = new Context())
                 {
-                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync();
+                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync(TestContext.Current.CancellationToken);
 
                     dest.Value.ShouldBe("Jimmy is straight up dope! No joke!");
                 }
@@ -138,7 +138,7 @@
             {
                 using (var context = new Context())
                 {
-                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync();
+                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync(TestContext.Current.CancellationToken);
 
                     dest.Value.ShouldBe("Jimmy is straight up dope");
                 }
@@ -188,7 +188,7 @@
             {
                 using (var context = new Context())
                 {
-                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync();
+                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync(TestContext.Current.CancellationToken);
 
                     dest.Value.ShouldBe("Jimmy is straight up dope! No joke!");
                 }
@@ -238,7 +238,7 @@
             {
                 using (var context = new Context())
                 {
-                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync();
+                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync(TestContext.Current.CancellationToken);
 
                     dest.Value.ShouldBe((5 + 3) * 2);
                 }
@@ -290,7 +290,7 @@
             {
                 using (var context = new Context())
                 {
-                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync();
+                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync(TestContext.Current.CancellationToken);
 
                     dest.Value.ShouldBe("Jimmy, for real, is straight up dope! No joke!");
                 }
@@ -340,12 +340,10 @@
             [Fact]
             public async Task ShouldApplyTypeMapThenProfileThenRoot()
             {
-                using (var context = new Context())
-                {
-                    var dest = await ProjectTo<Dest>(context.Sources).SingleAsync();
+                await using var context = new Context();
+                var dest = await ProjectTo<Dest>(context.Sources).SingleAsync(TestContext.Current.CancellationToken);
 
-                    dest.Value.ShouldBe("Jimmy, seriously, for real, is straight up dope! No joke!");
-                }
+                dest.Value.ShouldBe("Jimmy, seriously, for real, is straight up dope! No joke!");
             }
         }
     }

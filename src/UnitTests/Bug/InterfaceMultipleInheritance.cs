@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests.Bug
+namespace MahhalaMapper.UnitTests.Bug
 {
     namespace InterfaceMultipleInheritance
     {
-        public class InterfaceMultipleInheritanceBug1036 : AutoMapperSpecBase
+        public class InterfaceMultipleInheritanceBug1036 : MahhalaMapperSpecBase
         {
             private MapTo _destination;
 
@@ -100,7 +100,7 @@ namespace AutoMapper.UnitTests.Bug
             }
         }
 
-        public class InterfaceMultipleInheritanceBug1016 : AutoMapperSpecBase
+        public class InterfaceMultipleInheritanceBug1016 : MahhalaMapperSpecBase
         {
             private class4DTO _destination;
 

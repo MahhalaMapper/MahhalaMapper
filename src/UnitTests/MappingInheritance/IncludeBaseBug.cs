@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
-public class Include : AutoMapperSpecBase
+﻿namespace MahhalaMapper.UnitTests.MappingInheritance;
+public class Include : MahhalaMapperSpecBase
 {
     public class From
     {
@@ -44,7 +44,7 @@ public class Include : AutoMapperSpecBase
         ReferenceEquals(dest.GetType(), typeof(Concrete)).ShouldBeTrue();
     }
 }
-public class BaseNotMatching : AutoMapperSpecBase
+public class BaseNotMatching : MahhalaMapperSpecBase
 {
     public class From
     {
@@ -84,7 +84,7 @@ public class BaseNotMatching : AutoMapperSpecBase
         dest.AbstractValue.ShouldBe(42);
     }
 }
-public class BaseMatchingDifferentType : AutoMapperSpecBase
+public class BaseMatchingDifferentType : MahhalaMapperSpecBase
 {
     public class From
     {
@@ -125,7 +125,7 @@ public class BaseMatchingDifferentType : AutoMapperSpecBase
         dest.AbstractValue.ShouldBe(42);
     }
 }
-public class IgnoreBaseMatching : AutoMapperSpecBase
+public class IgnoreBaseMatching : MahhalaMapperSpecBase
 {
     public class From
     {

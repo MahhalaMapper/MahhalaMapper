@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
 public class NullableEnumToNullableValueType
 {
-    public class CannotConvertEnumToNullableWhenPassedNull : AutoMapperSpecBase
+    public class CannotConvertEnumToNullableWhenPassedNull : MahhalaMapperSpecBase
     {
         public enum DummyTypes : int
         {

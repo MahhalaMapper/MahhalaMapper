@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class CollectionsNullability : AutoMapperSpecBase
+public class CollectionsNullability : MahhalaMapperSpecBase
 {
     Holder _destination;
 

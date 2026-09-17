@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests;
+namespace MahhalaMapper.UnitTests;
 
 using Execution;
 public class ObjectFactoryTests

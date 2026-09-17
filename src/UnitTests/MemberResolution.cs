@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.MemberResolution;
+namespace MahhalaMapper.UnitTests.MemberResolution;
 
-public class When_multiple_source_members_match_postfix : AutoMapperSpecBase
+public class When_multiple_source_members_match_postfix : MahhalaMapperSpecBase
 {
     class Order
     {
@@ -28,7 +28,7 @@ public class When_multiple_source_members_match_postfix : AutoMapperSpecBase
         destination.ProductId.ShouldBe(12);
     }
 }
-public class When_multiple_source_members_match : AutoMapperSpecBase
+public class When_multiple_source_members_match : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -51,7 +51,7 @@ public class When_multiple_source_members_match : AutoMapperSpecBase
         destination.OtherValue.ShouldBe(42);
     }
 }
-public class When_mapping_derived_classes_in_arrays : AutoMapperSpecBase
+public class When_mapping_derived_classes_in_arrays : MahhalaMapperSpecBase
 {
     private DtoObject[] _result;
 
@@ -110,7 +110,7 @@ public class When_mapping_derived_classes_in_arrays : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_derived_classes : AutoMapperSpecBase
+public class When_mapping_derived_classes : MahhalaMapperSpecBase
 {
     private DtoObject _result;
 
@@ -156,7 +156,7 @@ public class When_mapping_derived_classes : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_derived_classes_from_intefaces_to_abstract : AutoMapperSpecBase
+public class When_mapping_derived_classes_from_intefaces_to_abstract : MahhalaMapperSpecBase
 {
     private DtoObject[] _result;
 
@@ -214,7 +214,7 @@ public class When_mapping_derived_classes_from_intefaces_to_abstract : AutoMappe
     }
 }
 
-public class When_mapping_derived_classes_as_property_of_top_object : AutoMapperSpecBase
+public class When_mapping_derived_classes_as_property_of_top_object : MahhalaMapperSpecBase
 {
     private DtoModel _result;
 
@@ -276,7 +276,7 @@ public class When_mapping_derived_classes_as_property_of_top_object : AutoMapper
     }
 }
 
-public class When_mapping_dto_with_only_properties : AutoMapperSpecBase
+public class When_mapping_dto_with_only_properties : MahhalaMapperSpecBase
 {
     private ModelDto _result;
 
@@ -376,7 +376,7 @@ public class When_mapping_dto_with_only_properties : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_dto_with_only_fields : AutoMapperSpecBase
+public class When_mapping_dto_with_only_fields : MahhalaMapperSpecBase
 {
     private ModelDto _result;
 
@@ -475,7 +475,7 @@ public class When_mapping_dto_with_only_fields : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_dto_with_fields_and_properties : AutoMapperSpecBase
+public class When_mapping_dto_with_fields_and_properties : MahhalaMapperSpecBase
 {
     private ModelDto _result;
 
@@ -575,7 +575,7 @@ public class When_mapping_dto_with_fields_and_properties : AutoMapperSpecBase
     }
 }
 
-public class When_ignoring_a_dto_property_during_configuration : AutoMapperSpecBase
+public class When_ignoring_a_dto_property_during_configuration : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -618,7 +618,7 @@ public class When_ignoring_a_dto_property_during_configuration : AutoMapperSpecB
     }
 }
 
-public class When_mapping_dto_with_get_methods : AutoMapperSpecBase
+public class When_mapping_dto_with_get_methods : MahhalaMapperSpecBase
 {
     private ModelDto _result;
 
@@ -675,7 +675,7 @@ public class When_mapping_dto_with_get_methods : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_a_dto_with_names_matching_properties : AutoMapperSpecBase
+public class When_mapping_a_dto_with_names_matching_properties : MahhalaMapperSpecBase
 {
     private ModelDto _result;
 
@@ -732,7 +732,7 @@ public class When_mapping_a_dto_with_names_matching_properties : AutoMapperSpecB
     }
 }
 
-public class When_mapping_with_a_dto_subtype : AutoMapperSpecBase
+public class When_mapping_with_a_dto_subtype : MahhalaMapperSpecBase
 {
     private ModelDto _result;
 
@@ -784,7 +784,7 @@ public class When_mapping_with_a_dto_subtype : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_a_dto_with_a_set_only_property_and_a_get_method : AutoMapperSpecBase
+public class When_mapping_a_dto_with_a_set_only_property_and_a_get_method : MahhalaMapperSpecBase
 {
     private ModelDto _result;
 
@@ -829,7 +829,7 @@ public class When_mapping_a_dto_with_a_set_only_property_and_a_get_method : Auto
     }
 }
 
-public class When_mapping_using_a_custom_member_mappings : AutoMapperSpecBase
+public class When_mapping_using_a_custom_member_mappings : MahhalaMapperSpecBase
 {
     private ModelDto _result;
 
@@ -984,7 +984,7 @@ public class When_mapping_using_a_custom_member_mappings : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_using_custom_member_mappings_without_generics : AutoMapperSpecBase
+public class When_mapping_using_custom_member_mappings_without_generics : MahhalaMapperSpecBase
 {
     private OrderDTO _result;
 
@@ -1092,7 +1092,7 @@ public class When_mapping_using_custom_member_mappings_without_generics : AutoMa
 
 }
     
-public class When_mapping_to_a_top_level_camelCased_destination_member : AutoMapperSpecBase
+public class When_mapping_to_a_top_level_camelCased_destination_member : MahhalaMapperSpecBase
 {
     private Destination _result;
 
@@ -1124,7 +1124,7 @@ public class When_mapping_to_a_top_level_camelCased_destination_member : AutoMap
     }
 }
 
-public class When_mapping_to_a_self_referential_object : AutoMapperSpecBase
+public class When_mapping_to_a_self_referential_object : MahhalaMapperSpecBase
 {
     private CategoryDto _result;
 
@@ -1180,7 +1180,7 @@ public class When_mapping_to_a_self_referential_object : AutoMapperSpecBase
     }
 }
     
-public class When_mapping_to_types_in_a_non_generic_manner : AutoMapperSpecBase
+public class When_mapping_to_types_in_a_non_generic_manner : MahhalaMapperSpecBase
 {
     private Destination _result;
 
@@ -1211,7 +1211,7 @@ public class When_mapping_to_types_in_a_non_generic_manner : AutoMapperSpecBase
     }
 }
 
-public class When_matching_source_and_destination_members_with_underscored_members : AutoMapperSpecBase
+public class When_matching_source_and_destination_members_with_underscored_members : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -1249,7 +1249,7 @@ public class When_matching_source_and_destination_members_with_underscored_membe
     }
 }
 
-public class When_source_members_configured_in_a_root_profile_contain_prefixes : AutoMapperSpecBase
+public class When_source_members_configured_in_a_root_profile_contain_prefixes : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -1300,7 +1300,7 @@ public class When_source_members_configured_in_a_root_profile_contain_prefixes :
     }
 }
 
-public class When_source_members_contain_prefixes : AutoMapperSpecBase
+public class When_source_members_contain_prefixes : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -1344,7 +1344,7 @@ public class When_source_members_contain_prefixes : AutoMapperSpecBase
 }
 
 
-public class When_source_members_contain_prefixes_with_lowercase : AutoMapperSpecBase
+public class When_source_members_contain_prefixes_with_lowercase : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -1387,7 +1387,7 @@ public class When_source_members_contain_prefixes_with_lowercase : AutoMapperSpe
     }
 }
 
-public class When_source_members_contain_postfixes_with_lowercase : AutoMapperSpecBase
+public class When_source_members_contain_postfixes_with_lowercase : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -1430,7 +1430,7 @@ public class When_source_members_contain_postfixes_with_lowercase : AutoMapperSp
     }
 }
 
-public class When_source_members_configured_in_a_root_profile_contain_postfixes_and_prefixes : AutoMapperSpecBase
+public class When_source_members_configured_in_a_root_profile_contain_postfixes_and_prefixes : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -1483,7 +1483,7 @@ public class When_source_members_configured_in_a_root_profile_contain_postfixes_
 }
 
 
-public class When_source_members_contain_postfixes_and_prefixes : AutoMapperSpecBase
+public class When_source_members_contain_postfixes_and_prefixes : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -1527,7 +1527,7 @@ public class When_source_members_contain_postfixes_and_prefixes : AutoMapperSpec
     }
 }
 
-public class When_source_member_names_match_with_underscores : AutoMapperSpecBase
+public class When_source_member_names_match_with_underscores : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -1558,7 +1558,7 @@ public class When_source_member_names_match_with_underscores : AutoMapperSpecBas
     }
 }
 
-public class When_recognizing_explicit_member_aliases : AutoMapperSpecBase
+public class When_recognizing_explicit_member_aliases : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -1590,7 +1590,7 @@ public class When_recognizing_explicit_member_aliases : AutoMapperSpecBase
     }
 }
 
-public class When_destination_members_contain_prefixes : AutoMapperSpecBase
+public class When_destination_members_contain_prefixes : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -1625,7 +1625,7 @@ public class When_destination_members_contain_prefixes : AutoMapperSpecBase
     }
 }
 
-public class When_destination_type_has_private_members : AutoMapperSpecBase
+public class When_destination_type_has_private_members : MahhalaMapperSpecBase
 {
     private IDestination _destination;
 

@@ -1,7 +1,7 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
 // Bug #511
-// https://github.com/AutoMapper/AutoMapper/issues/511
+// https://github.com/MahhalaMapper/MahhalaMapper/issues/511
 public class ReadOnlyCollectionMappingBug
 {
     class Source { public int X { get; set; } }

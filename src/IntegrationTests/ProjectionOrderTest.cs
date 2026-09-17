@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+﻿namespace MahhalaMapper.IntegrationTests;
 
 public class ProjectionOrderTest : IntegrationTest<ProjectionOrderTest.DatabaseInitializer>
 {

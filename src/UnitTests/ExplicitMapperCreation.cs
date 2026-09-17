@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests;
-public class ExplicitMapperCreation : AutoMapperSpecBase
+﻿namespace MahhalaMapper.UnitTests;
+public class ExplicitMapperCreation : MahhalaMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() =>new(cfg => cfg.CreateMap<Source, Dest>());
     public class Source

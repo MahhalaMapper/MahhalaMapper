@@ -1,6 +1,6 @@
 ﻿using System.Collections.Specialized;
 
-namespace AutoMapper.UnitTests.Mappers;
+namespace MahhalaMapper.UnitTests.Mappers;
 
 public class NameValueCollectionMapperTests
 {

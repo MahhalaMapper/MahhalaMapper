@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests;
+namespace MahhalaMapper.UnitTests;
 
-public class When_overriding_global_ignore : AutoMapperSpecBase
+public class When_overriding_global_ignore : MahhalaMapperSpecBase
 {
     Destination _destination;
 

@@ -1,6 +1,6 @@
-﻿using AutoMapper.QueryableExtensions.Impl;
-namespace AutoMapper.UnitTests.Projection;
-public class ProjectionMappers : AutoMapperSpecBase
+﻿using MahhalaMapper.QueryableExtensions.Impl;
+namespace MahhalaMapper.UnitTests.Projection;
+public class ProjectionMappers : MahhalaMapperSpecBase
 {
     class Source
     {

@@ -1,7 +1,7 @@
-using AutoMapper.Configuration;
-using AutoMapper.Internal.Mappers;
+using MahhalaMapper.Configuration;
+using MahhalaMapper.Internal.Mappers;
 
-namespace AutoMapper.UnitTests;
+namespace MahhalaMapper.UnitTests;
 
 public class CustomValidations
 {
@@ -38,7 +38,7 @@ public class CustomValidations
                 cfg.CreateMap<Source, Dest>();
             });
 
-            new Action(config.AssertConfigurationIsValid).ShouldThrow<AutoMapperConfigurationException>().Message.ShouldBe(nameof(When_using_custom_validation));
+            new Action(config.AssertConfigurationIsValid).ShouldThrow<MahhalaMapperConfigurationException>().Message.ShouldBe(nameof(When_using_custom_validation));
 
             _calledForRoot.ShouldBeTrue();
             _calledForValues.ShouldBeTrue();
@@ -55,7 +55,7 @@ public class CustomValidations
                 context.Types.DestinationType.ShouldBe(typeof(Dest));
                 context.ObjectMapper.ShouldBeNull();
                 context.MemberMap.ShouldBeNull();
-                context.Exceptions.Add(new AutoMapperConfigurationException(nameof(When_using_custom_validation)));
+                context.Exceptions.Add(new MahhalaMapperConfigurationException(nameof(When_using_custom_validation)));
             }
             else
             {

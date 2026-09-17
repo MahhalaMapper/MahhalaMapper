@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace MahhalaMapper.UnitTests.Bug;
 
-public class MultipleInterfaceInheritance : AutoMapperSpecBase
+public class MultipleInterfaceInheritance : MahhalaMapperSpecBase
 {
     private ThingDto _thingDto;
 

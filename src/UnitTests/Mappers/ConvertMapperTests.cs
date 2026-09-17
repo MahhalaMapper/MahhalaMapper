@@ -1,8 +1,8 @@
-﻿using AutoMapper.Internal.Mappers;
+﻿using MahhalaMapper.Internal.Mappers;
 
-namespace AutoMapper.UnitTests.Mappers;
+namespace MahhalaMapper.UnitTests.Mappers;
 
-public class ConvertMapperTests : AutoMapperSpecBase
+public class ConvertMapperTests : MahhalaMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(c => { });
 

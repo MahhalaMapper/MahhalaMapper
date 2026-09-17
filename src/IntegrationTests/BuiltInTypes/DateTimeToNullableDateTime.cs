@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.BuiltInTypes;
+﻿namespace MahhalaMapper.IntegrationTests.BuiltInTypes;
 
 public class DateTimeToNullableDateTime : IntegrationTest<DateTimeToNullableDateTime.DatabaseInitializer>
 {

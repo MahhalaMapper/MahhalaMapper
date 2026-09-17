@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.IntegrationTests.ExplicitExpansion;
+﻿namespace MahhalaMapper.IntegrationTests.ExplicitExpansion;
 
-public class MembersToExpandExpressions  : AutoMapperSpecBase, IAsyncLifetime
+public class MembersToExpandExpressions  : MahhalaMapperSpecBase, IAsyncLifetime
 {
     public class SourceDeepInner
     {
@@ -56,12 +56,12 @@ public class MembersToExpandExpressions  : AutoMapperSpecBase, IAsyncLifetime
             ProjectTo<Dto>(context.Sources, null, _ => _.DeepFlattened).First().DeepFlattened.ShouldBe(_source.Inner.Deep.Desc);
         }
     }
-    public async Task InitializeAsync()
+    public async System.Threading.Tasks.ValueTask InitializeAsync()
     {
         var initializer = new DatabaseInitializer();
 
         await initializer.Migrate();
     }
 
-    public Task DisposeAsync() => Task.CompletedTask;
+    public System.Threading.Tasks.ValueTask DisposeAsync() => new System.Threading.Tasks.ValueTask();
 }

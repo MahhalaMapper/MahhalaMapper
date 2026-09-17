@@ -1,8 +1,8 @@
 using System.Dynamic;
 
-namespace AutoMapper.UnitTests.Bug;
+namespace MahhalaMapper.UnitTests.Bug;
 
-public class MapExpandoObjectProperty : AutoMapperSpecBase
+public class MapExpandoObjectProperty : MahhalaMapperSpecBase
 {
 
     class From

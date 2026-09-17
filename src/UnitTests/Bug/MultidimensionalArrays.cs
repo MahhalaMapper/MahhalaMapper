@@ -1,8 +1,8 @@
-﻿using AutoMapper.Internal.Mappers;
+﻿using MahhalaMapper.Internal.Mappers;
 
-namespace AutoMapper.UnitTests.Bug;
+namespace MahhalaMapper.UnitTests.Bug;
 
-public class MultidimensionalArrays : AutoMapperSpecBase
+public class MultidimensionalArrays : MahhalaMapperSpecBase
 {
     const int SomeValue = 154;
     Source _e = new Source(SomeValue);

@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Bug
+﻿namespace MahhalaMapper.UnitTests.Bug
 {
     namespace SetterOnlyBug
     {
-        public class MappingTests : AutoMapperSpecBase
+        public class MappingTests : MahhalaMapperSpecBase
         {
             protected override MapperConfiguration CreateConfiguration() => new(cfg =>
             {

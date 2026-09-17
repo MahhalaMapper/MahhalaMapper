@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class OneSourceWithMultipleDestinationsWithoutPR : AutoMapperSpecBase
+public class OneSourceWithMultipleDestinationsWithoutPR : MahhalaMapperSpecBase
 {
     ClientModel _destination;
 

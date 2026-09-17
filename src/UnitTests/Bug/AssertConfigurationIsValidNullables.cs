@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class AssertConfigurationIsValidNullables : AutoMapperSpecBase
+public class AssertConfigurationIsValidNullables : MahhalaMapperSpecBase
 {
     class Source
     {

@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Bug
+﻿namespace MahhalaMapper.UnitTests.Bug
 {
     namespace ParentChildResolversBug
     {
@@ -72,7 +72,7 @@
             }
         }
 
-        public class ParentChildResolverTests : AutoMapperSpecBase
+        public class ParentChildResolverTests : MahhalaMapperSpecBase
         {
             private Dest _dest;
 

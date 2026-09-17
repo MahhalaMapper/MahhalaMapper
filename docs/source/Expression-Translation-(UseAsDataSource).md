@@ -1,6 +1,6 @@
 # Expression Translation (UseAsDataSource)
 
-Automapper supports translating Expressions from one object to another in a separate [package](https://www.nuget.org/packages/AutoMapper.Extensions.ExpressionMapping/).
+Automapper supports translating Expressions from one object to another in a separate [package](https://www.nuget.org/packages/MahhalaMapper.Extensions.ExpressionMapping/).
 This is done by substituting the properties from the source class to what they map to in the destination class.
 
 Given the example classes:
@@ -62,7 +62,7 @@ Resulting in `ols => ols.Where(ol => ol.Quantity > 5).OrderBy(ol => ol.Quantity)
 
 ### Mapping Flattened Properties to Navigation Properties
 
-AutoMapper also supports mapping flattened (TModel or DTO) properties in expressions to their corresponding (TData) navigation properties (when the navigation property has been removed from the view model or DTO) e.g. CourseModel.DepartmentName from the model expression becomes Course.Department in the data expression.
+MahhalaMapper also supports mapping flattened (TModel or DTO) properties in expressions to their corresponding (TData) navigation properties (when the navigation property has been removed from the view model or DTO) e.g. CourseModel.DepartmentName from the model expression becomes Course.Department in the data expression.
 
 Take the following set of classes:
 

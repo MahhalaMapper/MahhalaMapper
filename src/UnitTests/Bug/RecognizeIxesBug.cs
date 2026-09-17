@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests.Bug
+namespace MahhalaMapper.UnitTests.Bug
 {
     namespace RecognizeIxesBug
     {
-        public class IxesTest : AutoMapperSpecBase
+        public class IxesTest : MahhalaMapperSpecBase
         {
             private Stuff _source;
             private StuffView _dest;

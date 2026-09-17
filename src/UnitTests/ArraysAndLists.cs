@@ -1,8 +1,8 @@
 using System.Dynamic;
-using AutoMapper.Internal.Mappers;
-namespace AutoMapper.UnitTests.ArraysAndLists;
+using MahhalaMapper.Internal.Mappers;
+namespace MahhalaMapper.UnitTests.ArraysAndLists;
 
-public class When_mapping_to_Existing_IEnumerable : AutoMapperSpecBase
+public class When_mapping_to_Existing_IEnumerable : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -35,7 +35,7 @@ public class When_mapping_to_Existing_IEnumerable : AutoMapperSpecBase
         destination.Items.ShouldBeEmpty();
     }
 }
-public class When_mapping_to_an_array_as_ICollection_with_MapAtRuntime : AutoMapperSpecBase
+public class When_mapping_to_an_array_as_ICollection_with_MapAtRuntime : MahhalaMapperSpecBase
 {
     Destination _destination;
     SourceItem[] _sourceItems = new [] { new SourceItem { Value = "1" }, new SourceItem { Value = "2" }, new SourceItem { Value = "3" } };
@@ -79,7 +79,7 @@ public class When_mapping_to_an_array_as_ICollection_with_MapAtRuntime : AutoMap
     }
 }
 
-public class When_mapping_an_array : AutoMapperSpecBase
+public class When_mapping_an_array : MahhalaMapperSpecBase
 {
     decimal[] _source = Enumerable.Range(1, 10).Select(i=>(decimal)i).ToArray();
     decimal[] _destination;
@@ -98,7 +98,7 @@ public class When_mapping_an_array : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_a_primitive_array : AutoMapperSpecBase
+public class When_mapping_a_primitive_array : MahhalaMapperSpecBase
 {
     int[] _source = Enumerable.Range(1, 10).ToArray();
     long[] _destination;
@@ -123,7 +123,7 @@ public class When_mapping_a_primitive_array : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_a_primitive_array_with_custom_mapping_function : AutoMapperSpecBase
+public class When_mapping_a_primitive_array_with_custom_mapping_function : MahhalaMapperSpecBase
 {
     int[] _source = Enumerable.Range(1, 10).ToArray();
     int[] _destination;
@@ -145,7 +145,7 @@ public class When_mapping_a_primitive_array_with_custom_mapping_function : AutoM
     }
 }
 
-public class When_mapping_a_primitive_array_with_custom_object_mapper : AutoMapperSpecBase
+public class When_mapping_a_primitive_array_with_custom_object_mapper : MahhalaMapperSpecBase
 {
     int[] _source = Enumerable.Range(1, 10).ToArray();
     int[] _destination;
@@ -178,7 +178,7 @@ public class When_mapping_a_primitive_array_with_custom_object_mapper : AutoMapp
     }
 }
 
-public class When_mapping_null_list_to_array: AutoMapperSpecBase
+public class When_mapping_null_list_to_array: MahhalaMapperSpecBase
 {
     Destination _destination;
 
@@ -220,7 +220,7 @@ public class When_mapping_null_list_to_array: AutoMapperSpecBase
     }
 }
 
-public class When_mapping_null_array_to_list : AutoMapperSpecBase
+public class When_mapping_null_array_to_list : MahhalaMapperSpecBase
 {
     Destination _destination;
 
@@ -262,7 +262,7 @@ public class When_mapping_null_array_to_list : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_collections : AutoMapperSpecBase
+public class When_mapping_collections : MahhalaMapperSpecBase
 {
     Author mappedAuthor;
 
@@ -300,7 +300,7 @@ public class When_mapping_collections : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_an_existing_HashSet_typed_as_IEnumerable : AutoMapperSpecBase
+public class When_mapping_to_an_existing_HashSet_typed_as_IEnumerable : MahhalaMapperSpecBase
 {
     private Destination _destination = new Destination();
 
@@ -332,7 +332,7 @@ public class When_mapping_to_an_existing_HashSet_typed_as_IEnumerable : AutoMapp
     }
 }
 
-public class When_mapping_to_an_existing_array_typed_as_IEnumerable : AutoMapperSpecBase
+public class When_mapping_to_an_existing_array_typed_as_IEnumerable : MahhalaMapperSpecBase
 {
     private Destination _destination = new Destination();
 
@@ -363,7 +363,7 @@ public class When_mapping_to_an_existing_array_typed_as_IEnumerable : AutoMapper
     }
 }
 
-public class When_mapping_to_a_concrete_non_generic_ienumerable : AutoMapperSpecBase
+public class When_mapping_to_a_concrete_non_generic_ienumerable : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -410,7 +410,7 @@ public class When_mapping_to_a_concrete_non_generic_ienumerable : AutoMapperSpec
     }
 }
 
-public class When_mapping_to_a_concrete_generic_ienumerable : AutoMapperSpecBase
+public class When_mapping_to_a_concrete_generic_ienumerable : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -457,7 +457,7 @@ public class When_mapping_to_a_concrete_generic_ienumerable : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_a_getter_only_ienumerable : AutoMapperSpecBase
+public class When_mapping_to_a_getter_only_ienumerable : MahhalaMapperSpecBase
 {
     private Destination _destination = new Destination();
     public class Source
@@ -483,7 +483,7 @@ public class When_mapping_to_a_getter_only_ienumerable : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_a_getter_only_existing_ienumerable : AutoMapperSpecBase
+public class When_mapping_to_a_getter_only_existing_ienumerable : MahhalaMapperSpecBase
 {
     private Destination _destination = new Destination();
     public class Source
@@ -509,7 +509,7 @@ public class When_mapping_to_a_getter_only_existing_ienumerable : AutoMapperSpec
     }
 }
 
-public class When_mapping_to_a_concrete_non_generic_icollection : AutoMapperSpecBase
+public class When_mapping_to_a_concrete_non_generic_icollection : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -556,7 +556,7 @@ public class When_mapping_to_a_concrete_non_generic_icollection : AutoMapperSpec
     }
 }
 
-public class When_mapping_to_a_concrete_generic_icollection : AutoMapperSpecBase
+public class When_mapping_to_a_concrete_generic_icollection : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -591,7 +591,7 @@ public class When_mapping_to_a_concrete_generic_icollection : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_a_concrete_ilist : AutoMapperSpecBase
+public class When_mapping_to_a_concrete_ilist : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -626,7 +626,7 @@ public class When_mapping_to_a_concrete_ilist : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_a_concrete_generic_ilist : AutoMapperSpecBase
+public class When_mapping_to_a_concrete_generic_ilist : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -661,7 +661,7 @@ public class When_mapping_to_a_concrete_generic_ilist : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_a_custom_list_with_the_same_type : AutoMapperSpecBase
+public class When_mapping_to_a_custom_list_with_the_same_type : MahhalaMapperSpecBase
 {
     private Destination _destination;
     private Source _source;
@@ -697,7 +697,7 @@ public class When_mapping_to_a_custom_list_with_the_same_type : AutoMapperSpecBa
         _source.Values.ShouldBe(_destination.Values);
     }
 }
-public class When_mapping_to_a_collection_with_instantiation_managed_by_the_destination : AutoMapperSpecBase
+public class When_mapping_to_a_collection_with_instantiation_managed_by_the_destination : MahhalaMapperSpecBase
 {
     private Destination _destination;
     private Source _source;
@@ -749,7 +749,7 @@ public class When_mapping_to_a_collection_with_instantiation_managed_by_the_dest
     }
 }
 
-public class When_mapping_to_an_existing_list_with_existing_items : AutoMapperSpecBase
+public class When_mapping_to_an_existing_list_with_existing_items : MahhalaMapperSpecBase
 {
     private Destination _destination;
     private Source _source;
@@ -801,7 +801,7 @@ public class When_mapping_to_an_existing_list_with_existing_items : AutoMapperSp
     }
 }
 
-public class When_mapping_to_getter_only_list_with_existing_items : AutoMapperSpecBase
+public class When_mapping_to_getter_only_list_with_existing_items : MahhalaMapperSpecBase
 {
     public class SourceItem
     {
@@ -836,7 +836,7 @@ public class When_mapping_to_getter_only_list_with_existing_items : AutoMapperSp
         destination.IValues.ShouldBeEmpty();
     }
 }
-public class When_mapping_to_list_with_existing_items : AutoMapperSpecBase
+public class When_mapping_to_list_with_existing_items : MahhalaMapperSpecBase
 {
     public class SourceItem
     {
@@ -875,7 +875,7 @@ public class When_mapping_to_list_with_existing_items : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_a_collection_with_null_members : AutoMapperSpecBase
+public class When_mapping_a_collection_with_null_members : MahhalaMapperSpecBase
 {
     const string FirstString = null;
 

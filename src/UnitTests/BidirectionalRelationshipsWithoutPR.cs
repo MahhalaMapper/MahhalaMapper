@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests;
+namespace MahhalaMapper.UnitTests;
 
-public class CyclesWithInheritance : AutoMapperSpecBase
+public class CyclesWithInheritance : MahhalaMapperSpecBase
 {
     class FlowChart
     {
@@ -58,7 +58,7 @@ public class CyclesWithInheritance : AutoMapperSpecBase
         var dest = Map<FlowChartModel>(source);
     }
 }
-public class When_the_source_has_cyclical_references_with_dynamic_map : AutoMapperSpecBase
+public class When_the_source_has_cyclical_references_with_dynamic_map : MahhalaMapperSpecBase
 {
     public class CDataTypeModel<T>
     {
@@ -112,7 +112,7 @@ public class When_the_source_has_cyclical_references_with_dynamic_map : AutoMapp
     }
 }
 
-public class When_the_same_map_is_used_again : AutoMapperSpecBase
+public class When_the_same_map_is_used_again : MahhalaMapperSpecBase
 {
     class Source
     {
@@ -170,7 +170,7 @@ public class When_the_same_map_is_used_again : AutoMapperSpecBase
     }
 }
 
-public class When_the_source_has_cyclical_references : AutoMapperSpecBase
+public class When_the_source_has_cyclical_references : MahhalaMapperSpecBase
 {
     public class Article
     {
@@ -232,7 +232,7 @@ public class When_the_source_has_cyclical_references : AutoMapperSpecBase
     }
 }
 
-public class When_the_source_has_cyclical_references_with_ForPath : AutoMapperSpecBase
+public class When_the_source_has_cyclical_references_with_ForPath : MahhalaMapperSpecBase
 {
     public class Article
     {
@@ -294,7 +294,7 @@ public class When_the_source_has_cyclical_references_with_ForPath : AutoMapperSp
     }
 }
 
-public class When_the_source_has_cyclical_references_with_ignored_ForPath : AutoMapperSpecBase
+public class When_the_source_has_cyclical_references_with_ignored_ForPath : MahhalaMapperSpecBase
 {
     public class Supplier
     {
@@ -344,7 +344,7 @@ public class When_the_source_has_cyclical_references_with_ignored_ForPath : Auto
     }
 }
 
-public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_many_child_relationship : AutoMapperSpecBase
+public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_many_child_relationship : MahhalaMapperSpecBase
 {
     private ParentDto _dto;
 
@@ -410,7 +410,7 @@ public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_ma
 }
 
 
-//public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_many_child_relationship_using_CustomMapper_StackOverflow : AutoMapperSpecBase
+//public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_many_child_relationship_using_CustomMapper_StackOverflow : MahhalaMapperSpecBase
 //{
 //    private ParentDto _dto;
 //    private ParentModel _parent;
@@ -512,7 +512,7 @@ public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_ma
 //    }
 //}
 
-public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_one_child_relationship : AutoMapperSpecBase
+public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_one_child_relationship : MahhalaMapperSpecBase
 {
     private FooDto _dto;
 
@@ -564,7 +564,7 @@ public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_on
     }
 }
 
-public class When_mapping_to_a_destination_containing_two_dtos_mapped_from_the_same_source : AutoMapperSpecBase
+public class When_mapping_to_a_destination_containing_two_dtos_mapped_from_the_same_source : MahhalaMapperSpecBase
 {
     private FooContainerModel _dto;
 
@@ -615,7 +615,7 @@ public class When_mapping_to_a_destination_containing_two_dtos_mapped_from_the_s
     }
 }
 
-public class When_mapping_with_a_bidirectional_relationship_that_includes_arrays : AutoMapperSpecBase
+public class When_mapping_with_a_bidirectional_relationship_that_includes_arrays : MahhalaMapperSpecBase
 
 {
     private ParentDto _dtoParent;

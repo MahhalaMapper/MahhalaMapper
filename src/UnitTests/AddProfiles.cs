@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace MahhalaMapper.UnitTests;
 
-public class AddProfiles : AutoMapperSpecBase
+public class AddProfiles : MahhalaMapperSpecBase
 {
     public class Source { }
     public class Dest { }

@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests;
+namespace MahhalaMapper.UnitTests;
 
-public class When_using_non_generic_ResolveUsing : AutoMapperSpecBase
+public class When_using_non_generic_ResolveUsing : MahhalaMapperSpecBase
 {
     private Destination _destination;
 

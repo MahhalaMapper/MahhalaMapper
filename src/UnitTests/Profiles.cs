@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests
+namespace MahhalaMapper.UnitTests
 {
     namespace Profiles
     {
@@ -45,7 +45,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_configuring_a_profile_through_a_profile_subclass : AutoMapperSpecBase
+        public class When_configuring_a_profile_through_a_profile_subclass : MahhalaMapperSpecBase
         {
             private Dto _result;
             private static CustomProfile1 _customProfile;
@@ -110,7 +110,7 @@ namespace AutoMapper.UnitTests
         }
 
 
-        public class When_disabling_constructor_mapping_with_profiles : AutoMapperSpecBase
+        public class When_disabling_constructor_mapping_with_profiles : MahhalaMapperSpecBase
         {
             private B _b;
 

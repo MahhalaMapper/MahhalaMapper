@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class SubclassMappings : AutoMapperSpecBase
+public class SubclassMappings : MahhalaMapperSpecBase
 {
     public class Source
     {

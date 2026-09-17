@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class ProjectUsingTheQueriedEntity : AutoMapperSpecBase
+public class ProjectUsingTheQueriedEntity : MahhalaMapperSpecBase
 {
     private Destination _destination;
 

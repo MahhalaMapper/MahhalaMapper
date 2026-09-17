@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace MahhalaMapper.UnitTests.Bug;
 
-public class DestinationValueInitializedByCtorBug : AutoMapperSpecBase
+public class DestinationValueInitializedByCtorBug : MahhalaMapperSpecBase
 {
     public class ItemToMapDto
     {
@@ -51,6 +51,6 @@ public class DestinationValueInitializedByCtorBug : AutoMapperSpecBase
         }
 
         Mapper.Map<List<ItemToMap>, List<ItemToMapDto>>(entities);
-        typeof(AutoMapperMappingException).ShouldNotBeThrownBy(() => Mapper.Map<List<ItemToMap>, List<ItemToMapDto>>(entities));
+        typeof(MahhalaMapperMappingException).ShouldNotBeThrownBy(() => Mapper.Map<List<ItemToMap>, List<ItemToMapDto>>(entities));
     }
 }

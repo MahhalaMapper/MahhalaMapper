@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Bug;
-public class CaseSensitivityBug : AutoMapperSpecBase
+﻿namespace MahhalaMapper.UnitTests.Bug;
+public class CaseSensitivityBug : MahhalaMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

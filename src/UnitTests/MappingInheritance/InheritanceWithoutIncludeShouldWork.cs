@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
-public class InheritanceWithoutIncludeShouldWork : AutoMapperSpecBase
+﻿namespace MahhalaMapper.UnitTests.MappingInheritance;
+public class InheritanceWithoutIncludeShouldWork : MahhalaMapperSpecBase
 {
     public class FooBase { }
     public class Foo : FooBase { }

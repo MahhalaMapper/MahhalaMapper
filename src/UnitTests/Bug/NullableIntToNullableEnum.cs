@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class NullableIntToNullableEnum : AutoMapperSpecBase
+public class NullableIntToNullableEnum : MahhalaMapperSpecBase
 {
     Destination _destination;
 

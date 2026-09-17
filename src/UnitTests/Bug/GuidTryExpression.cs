@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class GuidTryExpression : AutoMapperSpecBase
+public class GuidTryExpression : MahhalaMapperSpecBase
 {
     private Destination _destination;
     private Guid _value = Guid.NewGuid();

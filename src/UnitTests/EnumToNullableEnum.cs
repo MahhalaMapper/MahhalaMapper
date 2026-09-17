@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace MahhalaMapper.UnitTests;
 
-public class EnumToNullableEnum : AutoMapperSpecBase
+public class EnumToNullableEnum : MahhalaMapperSpecBase
 {
     Destination _destination;
     public enum SomeEnum { Foo, Bar }

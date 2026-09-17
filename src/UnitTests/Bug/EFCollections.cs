@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class EFCollections : AutoMapperSpecBase
+public class EFCollections : MahhalaMapperSpecBase
 {
     private Dest _dest;
 

@@ -13,7 +13,7 @@ public class HiPerfTimer
         out long lpFrequency);
 
     private long _startTime, _stopTime;
-    private long _freq;
+    private readonly long _freq;
 
     // Constructor
     public HiPerfTimer()
@@ -31,7 +31,7 @@ public class HiPerfTimer
     // Start the timer
     public void Start()
     {
-        // lets do the waiting threads there work
+        // let's do the waiting threads there work
         Thread.Sleep(0);
 
         QueryPerformanceCounter(out _startTime);
@@ -48,7 +48,7 @@ public class HiPerfTimer
     {
         get
         {
-            double d = (_stopTime - _startTime);
+            double d = _stopTime - _startTime;
             return d / _freq;
         }
     }

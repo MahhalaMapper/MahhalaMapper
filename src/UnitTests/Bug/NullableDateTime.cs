@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class NullableDateTimeMapFromArray : AutoMapperSpecBase
+public class NullableDateTimeMapFromArray : MahhalaMapperSpecBase
 {
     public class Source
     {
@@ -30,7 +30,7 @@ public class NullableDateTimeMapFromArray : AutoMapperSpecBase
     public void Validate() => AssertConfigurationIsValid();
 }
 
-public class FromDateToNullableDateTime : AutoMapperSpecBase
+public class FromDateToNullableDateTime : MahhalaMapperSpecBase
 {
     Destination _destination;
     DateTime _date = new DateTime(1900, 1, 1);
@@ -64,7 +64,7 @@ public class FromDateToNullableDateTime : AutoMapperSpecBase
     }
 }
 
-public class NullableDateTime : AutoMapperSpecBase
+public class NullableDateTime : MahhalaMapperSpecBase
 {
     Destination _destination;
     DateTime _date = new DateTime(1900, 1, 1);

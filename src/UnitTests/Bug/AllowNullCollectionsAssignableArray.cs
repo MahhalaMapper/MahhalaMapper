@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class AllowNullCollectionsAssignableArray : AutoMapperSpecBase
+public class AllowNullCollectionsAssignableArray : MahhalaMapperSpecBase
 {
     private Destination _destination;
 

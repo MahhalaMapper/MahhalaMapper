@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class NullToString : AutoMapperSpecBase
+public class NullToString : MahhalaMapperSpecBase
 {
     private Destination _destination;
 

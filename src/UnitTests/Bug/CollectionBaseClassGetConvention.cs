@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class CollectionBaseClassGetConvention : AutoMapperSpecBase
+public class CollectionBaseClassGetConvention : MahhalaMapperSpecBase
 {
     Destination _destination;
     static int[] SomeCollection = new[] { 1, 2, 3 };

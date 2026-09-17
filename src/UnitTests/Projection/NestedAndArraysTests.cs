@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Projection
+﻿namespace MahhalaMapper.UnitTests.Projection
 {
     namespace NestedAndArraysTests
     {

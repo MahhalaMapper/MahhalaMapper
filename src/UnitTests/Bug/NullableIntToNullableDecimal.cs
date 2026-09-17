@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class NullableIntToNullableDecimal : AutoMapperSpecBase
+public class NullableIntToNullableDecimal : MahhalaMapperSpecBase
 {
     private Destination _destination;
 
@@ -34,7 +34,7 @@ public class NullableIntToNullableDecimal : AutoMapperSpecBase
     }
 }
 
-public class NullNullableIntToNullableDecimal : AutoMapperSpecBase
+public class NullNullableIntToNullableDecimal : MahhalaMapperSpecBase
 {
     private Destination _destination;
 

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class InternalProperties : AutoMapperSpecBase
+public class InternalProperties : MahhalaMapperSpecBase
 {
     public int SomeValue = 2354;
     private Destination _destination;

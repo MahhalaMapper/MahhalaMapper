@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace MahhalaMapper.UnitTests;
 
 public class ShouldIgnoreOpenGenericMethods : NonValidatingSpecBase
 {
@@ -63,7 +63,7 @@ public class ShouldMapMethodInstanceMethods : NonValidatingSpecBase
     public void Should_report_unmapped_property()
     {
         new Action(AssertConfigurationIsValid)
-            .ShouldThrowException<AutoMapperConfigurationException>(ex => 
+            .ShouldThrowException<MahhalaMapperConfigurationException>(ex => 
             {
                 ex.Errors.ShouldNotBeNull();
                 ex.Errors.ShouldNotBeEmpty();
@@ -130,7 +130,7 @@ public class ShouldMapMethodExtensionMethods : NonValidatingSpecBase
     public void Should_report_unmapped_property() 
     {
         new Action(AssertConfigurationIsValid)
-            .ShouldThrowException<AutoMapperConfigurationException>(ex => 
+            .ShouldThrowException<MahhalaMapperConfigurationException>(ex => 
             {
                 ex.Errors.ShouldNotBeNull();
                 ex.Errors.ShouldNotBeEmpty();

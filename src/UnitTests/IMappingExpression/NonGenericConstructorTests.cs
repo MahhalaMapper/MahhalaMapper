@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class NonGenericConstructorTests : AutoMapperSpecBase
+﻿namespace MahhalaMapper.UnitTests.Projection;
+public class NonGenericConstructorTests : MahhalaMapperSpecBase
 {
     private Dest[] _dest;
 

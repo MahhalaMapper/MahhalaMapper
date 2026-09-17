@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class NullableTypeConverter : AutoMapperSpecBase
+public class NullableTypeConverter : MahhalaMapperSpecBase
 {
     Destination _destination;
 
@@ -44,7 +44,7 @@ public class NullableTypeConverter : AutoMapperSpecBase
     }
 }
 
-public class CustomConverters : AutoMapperSpecBase
+public class CustomConverters : MahhalaMapperSpecBase
 {
     public class NullableIntToBoolConverter : ITypeConverter<int?, bool>
     {

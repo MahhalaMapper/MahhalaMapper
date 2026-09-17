@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class ForAllMembersAndResolveUsing : AutoMapperSpecBase
+public class ForAllMembersAndResolveUsing : MahhalaMapperSpecBase
 {
     private Destination _destination;
 

@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace AutoMapper.IntegrationTests.ExplicitExpansion;
+namespace MahhalaMapper.IntegrationTests.ExplicitExpansion;
 
 public static class Ext
 {

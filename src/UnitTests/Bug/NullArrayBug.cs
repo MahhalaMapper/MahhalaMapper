@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Bug;
-public class NullArrayBug : AutoMapperSpecBase
+﻿namespace MahhalaMapper.UnitTests.Bug;
+public class NullArrayBug : MahhalaMapperSpecBase
 {
     private static Source _source;
     private Destination _destination;

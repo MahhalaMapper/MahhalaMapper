@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class TargetISet : AutoMapperSpecBase
+public class TargetISet : MahhalaMapperSpecBase
 {
     Destination _destination;
     string[] _items = new[] { "one", "two", "three" };

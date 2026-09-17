@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class NullSubstituteInnerClass : AutoMapperSpecBase
+public class NullSubstituteInnerClass : MahhalaMapperSpecBase
 {
     private FooDto _destination;
 

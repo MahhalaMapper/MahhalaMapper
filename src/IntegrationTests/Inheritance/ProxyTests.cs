@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.Inheritance;
+﻿namespace MahhalaMapper.IntegrationTests.Inheritance;
 
 public class ProxyTests : IAsyncLifetime
 {
@@ -103,12 +103,12 @@ public class ProxyTests : IAsyncLifetime
         //  public int CourseId { get; set; }
     }
 
-    public async Task InitializeAsync()
+    public async System.Threading.Tasks.ValueTask InitializeAsync()
     {
         var initializer = new DatabaseInitializer();
 
         await initializer.Migrate();
     }
 
-    public Task DisposeAsync() => Task.CompletedTask;
+    public System.Threading.Tasks.ValueTask DisposeAsync() => new System.Threading.Tasks.ValueTask();
 }

@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
+﻿namespace MahhalaMapper.UnitTests.MappingInheritance;
 public class ReverseMapWithInclude : NonValidatingSpecBase
 {
     public class Duck : Animal { }
@@ -27,7 +27,7 @@ public class ReverseMapWithInclude : NonValidatingSpecBase
     }
 }
 
-public class ReverseMapWithIncludeBase : AutoMapperSpecBase
+public class ReverseMapWithIncludeBase : MahhalaMapperSpecBase
 {
     ConcreteSource _destination;
 

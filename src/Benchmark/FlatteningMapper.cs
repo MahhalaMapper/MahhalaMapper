@@ -1,4 +1,4 @@
-using AutoMapper;
+using MahhalaMapper;
 namespace Benchmark.Flattening;
 
 static class Config
@@ -311,7 +311,7 @@ public class ManualComplexTypeMapper : IObjectToObjectMapper
         {
             dest.Foos.Add(new InnerFooDest { Name = foo.Name, Int64 = foo.Int64, NullInt = foo.NullInt });
         }
-        ;
+        
         for(int index = 0; index < _foo.Foos.Count; index++)
         {
             var foo = _foo.Foos[index];
@@ -338,7 +338,7 @@ public class ManualCtorMapper : IObjectToObjectMapper
 public class FlatteningMapper : IObjectToObjectMapper
 {
     private ModelObject _source;
-    public string Name => "AutoMapper";
+    public string Name => "MahhalaMapper";
     public void Initialize()
     {
         _source = new ModelObject
@@ -361,7 +361,7 @@ public class FlatteningMapper : IObjectToObjectMapper
                 ProperName = "Some other name"
             },
         };
-        var mapper = Config.Mapper;
+        _ = Config.Mapper;
     }
     public object Map() => Config.Map<ModelObject, ModelDto>(_source);
 }
@@ -389,7 +389,7 @@ public class ManualMapper : IObjectToObjectMapper
             SubWithExtraName = new ModelSubObject
             {
                 ProperName = "Some other name"
-            },
+            }
         };
     }
     public object Map()

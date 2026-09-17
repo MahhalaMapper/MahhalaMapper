@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Bug
+﻿namespace MahhalaMapper.UnitTests.Bug
 {
     namespace NullableConverterBug
     {
-        namespace AutoMapperIssue
+        namespace MahhalaMapperIssue
         {
             public class TestProblem
             {

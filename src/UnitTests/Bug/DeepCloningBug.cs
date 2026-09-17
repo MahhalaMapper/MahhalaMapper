@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class DeepCloningBug : AutoMapperSpecBase
+public class DeepCloningBug : MahhalaMapperSpecBase
 {
     private Outer _source;
     private Outer _dest;

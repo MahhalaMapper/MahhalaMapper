@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace MahhalaMapper.UnitTests.Bug;
 
-public class GenericTypeConverterWithTwoArguments : AutoMapperSpecBase
+public class GenericTypeConverterWithTwoArguments : MahhalaMapperSpecBase
 {
     List<object> _destination;
 
@@ -28,7 +28,7 @@ public class GenericTypeConverterWithTwoArguments : AutoMapperSpecBase
     }
 }
 
-public class GenericTypeConverter : AutoMapperSpecBase
+public class GenericTypeConverter : MahhalaMapperSpecBase
 {
     Destination<int> _destination;
     OtherDestination<int> _otherDestination;
