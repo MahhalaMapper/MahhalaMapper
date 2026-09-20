@@ -34,4 +34,7 @@ public sealed class StringToEnumMapper : IObjectMapper
         return switchCases == null ? defaultExpression : Switch(sourceExpression, defaultExpression, comparison, switchCases);
     }
     public static bool StringCompareOrdinalIgnoreCase(string x, string y) => StringComparer.OrdinalIgnoreCase.Equals(x, y);
+#if NETSTANDARD2_0
+    public TypePair? GetAssociatedTypes(TypePair initialTypes) => null;
+#endif
 }

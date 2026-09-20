@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Summary>A convention-based object-object mapper.</Summary>
     <Description>A convention-based object-object mapper.</Description>
-    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net8.0;net9.0;net10.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>MahhalaMapper</AssemblyName>
     <AssemblyOriginatorKeyFile>..\..\MahhalaMapper.snk</AssemblyOriginatorKeyFile>
@@ -47,11 +47,39 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Meziantou.Polyfill" Version="1.0.165" Condition="'$(TargetFramework)' == 'netstandard2.0'">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.12" />
     <PackageReference Include="MinVer" Version="8.0.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.401" PrivateAssets="All" />
     <PackageReference Include="Microsoft.DotNet.ApiCompat" Version="7.0.0-beta.22074.1" PrivateAssets="All" />  
   </ItemGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <!-- Opt-in: semicolon-separated or pipe-separated list of name prefixes to include (allowlist) -->
+    <!-- When set, ONLY polyfills matching these prefixes will be generated -->
+    <!-- Tip: The names of the available polyfills and skip reasons are available when Debug.g.cs is enabled -->
+    <!--<MeziantouPolyfill_IncludedPolyfills>T:Type1|T:Type2|M:Member1</MeziantouPolyfill_IncludedPolyfills>-->
+    <!-- Opt-out: semicolon-separated or pipe-separated list of name prefixes to exclude (blocklist) -->
+    <!-- Polyfills matching these prefixes will NOT be generated -->
+    <MeziantouPolyfill_ExcludedPolyfills>M:System.Convert.</MeziantouPolyfill_ExcludedPolyfills>
+    <EmitCompilerGeneratedFiles>True</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)\GeneratedFiles</CompilerGeneratedFilesOutputPath>
+    <!-- Optional: Generate Debug.g.cs with polyfill generation decisions and skip reasons -->
+    <MeziantouPolyfill_GenerateDebugFile>true</MeziantouPolyfill_GenerateDebugFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' != 'netstandard2.0'">
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
 
   <Target Name="PreBuild" AfterTargets="GetAssemblyVersion">
     <Exec Condition=" '$(OS)' == 'Windows_NT' " Command="powershell -NoProfile -ExecutionPolicy Unrestricted -File &quot;$(ProjectDir)ApiCompat\PreBuild.ps1&quot; -version $(Version)" />

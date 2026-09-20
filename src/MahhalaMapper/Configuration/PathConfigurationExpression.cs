@@ -73,4 +73,7 @@ public sealed class PathConfigurationExpression<TSource, TDestination, TMember>(
                 (src, dest, srcMember, destMember, ctxt) => condition(new(src, dest, srcMember, destMember, ctxt));
             pm.Condition = expr;
         });
+#if NETSTANDARD2_0
+    public bool Ignored => false;
+#endif
 }
