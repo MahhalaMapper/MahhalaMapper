@@ -60,10 +60,8 @@
   </ItemGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <!-- Opt-in: semicolon-separated or pipe-separated list of name prefixes to include (allowlist) -->
-    <!-- When set, ONLY polyfills matching these prefixes will be generated -->
-    <!-- Tip: The names of the available polyfills and skip reasons are available when Debug.g.cs is enabled -->
-    <!--<MeziantouPolyfill_IncludedPolyfills>T:Type1|T:Type2|M:Member1</MeziantouPolyfill_IncludedPolyfills>-->
+    <!-- Limit polyfills to the BCL shims actually needed by the project and its referenced packages. -->
+    <MeziantouPolyfill_IncludedPolyfills>M:System.ArgumentNullException.ThrowIfNull;M:System.ArgumentOutOfRangeException.ThrowIfNegativeOrZero;M:System.Array.;M:System.ArraySegment`1.;M:System.BitConverter.;M:System.Boolean.TryFormat;M:System.Collections.Concurrent.;M:System.Collections.Generic.CollectionExtensions.;M:System.Collections.Generic.Dictionary`2.;M:System.Collections.Generic.KeyValuePair`2.;M:System.Collections.Generic.Queue`1.;M:System.Collections.Generic.Stack`1.;M:System.DateTime.;M:System.DateTimeOffset.;M:System.Guid.CreateVersion7;M:System.IO.Path.GetFileName;M:System.Linq.Enumerable.;M:System.MemoryExtensions.;M:System.Random.;M:System.Security.Cryptography.;M:System.String.;M:System.Threading.Interlocked.;M:System.Threading.Tasks.ValueTask.;M:System.Type.GetConstructor;M:System.Type.GetMethod;T:System.Buffers.SearchValues;T:System.Collections.ObjectModel.ReadOnlySet`1;T:System.Diagnostics.CodeAnalysis.;T:System.HashCode;T:System.Index;T:System.Net.Mime.MediaTypeNames.;T:System.Range;T:System.Runtime.CompilerServices.;T:System.Runtime.InteropServices.;T:System.Security.Cryptography.CryptographicOperations;T:System.Text.RegularExpressions.Regex.ValueMatchEnumerator;T:System.Text.RegularExpressions.Regex.ValueSplitEnumerator;T:System.Text.RegularExpressions.ValueMatch</MeziantouPolyfill_IncludedPolyfills>
     <!-- Opt-out: semicolon-separated or pipe-separated list of name prefixes to exclude (blocklist) -->
     <!-- Polyfills matching these prefixes will NOT be generated -->
     <MeziantouPolyfill_ExcludedPolyfills>M:System.Convert.</MeziantouPolyfill_ExcludedPolyfills>
